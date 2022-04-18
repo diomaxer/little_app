@@ -8,7 +8,7 @@ async def root():
     return {"message": "Hello World!"}
 
 
-@app.get("product/")
+@app.get("/product")
 async def root():
     return {
         "eggs": 12,
