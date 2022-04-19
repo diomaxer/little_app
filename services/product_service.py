@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from src.managers.product_manager import ProductManager
-from src.database.alchemy_models import Product
-from src.models.product_models import ProductPydanticCreate, ProductPydantic, ProductPydanticPatch
+from managers.product_manager import ProductManager
+from database.alchemy_models import Product
+from models.product_models import ProductPydanticCreate, ProductPydantic, ProductPydanticPatch
 
 
 class ProductService:

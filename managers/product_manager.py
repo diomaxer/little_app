@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
-from src.database.alchemy_models import Product
-from src.models.product_models import ProductPydanticCreate
+from database.alchemy_models import Product
 
 
 class ProductManager:

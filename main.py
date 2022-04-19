@@ -1,8 +1,5 @@
-import sys
-sys.path.append("..")
-
 from fastapi import FastAPI
-from src.routers import product_router, store_router
+from routers import product_router, store_router
 
 
 app = FastAPI()

@@ -1,4 +1,4 @@
-from src.database.alchemy_db import SessionLocal
+from database.alchemy_db import SessionLocal
 
 
 def get_db():

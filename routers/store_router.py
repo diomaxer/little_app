@@ -4,9 +4,9 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from starlette import status
 
-from src.models.store_models import StorePydantic, StoreProductsPydantic, StorePydanticPatch, StorePydanticCreate
-from src.database.dependencies import get_db
-from src.services.store_service import StoreService
+from models.store_models import StorePydantic, StoreProductsPydantic, StorePydanticPatch, StorePydanticCreate
+from database.dependencies import get_db
+from services.store_service import StoreService
 
 router = APIRouter()
 

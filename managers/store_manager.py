@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
-
-from src.database.alchemy_models import Store
+from database.alchemy_models import Store
 
 
 class StoreManager:

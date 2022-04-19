@@ -1,6 +1,6 @@
 from typing import Optional, List
 from pydantic import BaseModel
-from src.models.product_models import ProductPydantic
+from models.product_models import ProductPydantic
 
 
 class StorePydantic(BaseModel):

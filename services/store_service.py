@@ -1,10 +1,10 @@
 from sqlalchemy.orm import Session
 
-from src.database.alchemy_models import Store
+from database.alchemy_models import Store
 from managers.product_manager import ProductManager
 from models.product_models import ProductPydantic
-from src.managers.store_manager import StoreManager
-from src.models.store_models import StorePydantic, StoreProductsPydantic, StorePydanticPatch, StorePydanticCreate
+from managers.store_manager import StoreManager
+from models.store_models import StorePydantic, StoreProductsPydantic, StorePydanticPatch, StorePydanticCreate
 
 
 class StoreService:
