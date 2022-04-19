@@ -37,7 +37,6 @@ async def get_product_by_id(product_id: int, db_session: Session = Depends(get_d
     description="Update product",
     status_code=status.HTTP_200_OK,
     tags=['products'],
-    # response_model=ProductPydantic,
 )
 async def update_product(product_id: int, product: ProductPydanticPatch, db_session: Session = Depends(get_db)):
     return await ProductService.update_product(product_id=product_id, product=product, db_session=db_session)

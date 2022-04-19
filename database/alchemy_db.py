@@ -6,9 +6,12 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 load_dotenv()
+username = os.getenv('DB_USERNAME')
+password = os.getenv('DB_PASSWORD')
 host = os.getenv('DB_HOST')
+database = os.getenv('DB_DATABASE')
 
-SQLALCHEMY_DATABASE_URL = f"postgresql://{os.getenv('DB_USERNAME')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}/{os.getenv('DB_DATABASE')}"
+SQLALCHEMY_DATABASE_URL = f"postgresql://{username}:{password}@{host}/{database}"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,

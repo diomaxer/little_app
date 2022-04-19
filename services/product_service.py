@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from managers.product_manager import ProductManager
 from database.alchemy_models import Product
+from managers.store_manager import StoreManager
 from models.product_models import ProductPydanticCreate, ProductPydantic, ProductPydanticPatch
 
 
@@ -34,6 +35,10 @@ class ProductService:
 
     @staticmethod
     async def add_product(product: ProductPydanticCreate, db_session: Session):
+        store = await StoreManager.get_store_by_id(store_id=product.store_id, db_session=db_session)
+        if not store:
+            return None
+
         product = await ProductManager.add_product(product=Product(**product.__dict__), db_session=db_session)
         return ProductPydantic(**product.__dict__)
 
